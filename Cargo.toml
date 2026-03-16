@@ -8,6 +8,7 @@ members = [
     "crates/binary_options_tools",
     "BinaryOptionsToolsV2/rust",
     "BinaryOptionsToolsUni",
+    "BinaryOptionsToolsUni/bo2_macros"
 ]
 
 [profile.release]
