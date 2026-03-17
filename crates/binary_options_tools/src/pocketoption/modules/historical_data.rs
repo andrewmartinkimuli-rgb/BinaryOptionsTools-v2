@@ -1,7 +1,7 @@
 use std::{fmt::Debug, sync::Arc, time::Duration};
 
 use async_trait::async_trait;
-use binary_options_tools_core_pre::{
+use binary_options_tools_core::{
     error::{CoreError, CoreResult},
     reimports::{AsyncReceiver, AsyncSender, Message},
     traits::{ApiModule, Rule, RunnerCommand},
@@ -518,8 +518,8 @@ mod tests {
     use super::*;
     use crate::pocketoption::ssid::Ssid;
     use crate::pocketoption::state::StateBuilder;
-    use binary_options_tools_core_pre::reimports::{bounded_async, Message};
-    use binary_options_tools_core_pre::traits::ApiModule;
+    use binary_options_tools_core::reimports::{bounded_async, Message};
+    use binary_options_tools_core::traits::ApiModule;
     use std::sync::Arc;
     use uuid::Uuid;
 

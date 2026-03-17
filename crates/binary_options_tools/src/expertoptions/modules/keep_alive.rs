@@ -1,6 +1,6 @@
 use std::sync::Arc;
 
-use binary_options_tools_core_pre::{
+use binary_options_tools_core::{
     error::{CoreError, CoreResult},
     reimports::{AsyncReceiver, AsyncSender, Message},
     traits::{LightweightModule, Rule, RunnerCommand},

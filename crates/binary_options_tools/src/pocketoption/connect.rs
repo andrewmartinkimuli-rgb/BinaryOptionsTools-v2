@@ -2,7 +2,7 @@ use crate::{
     pocketoption::utils::try_connect,
     pocketoption::{ssid::Ssid, state::State},
 };
-use binary_options_tools_core_pre::{
+use binary_options_tools_core::{
     connector::{Connector, ConnectorError, ConnectorResult},
     reimports::{MaybeTlsStream, WebSocketStream},
 };

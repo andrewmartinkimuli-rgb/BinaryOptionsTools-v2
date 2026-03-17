@@ -1,7 +1,7 @@
 use std::{collections::HashMap, sync::Arc, time::Duration};
 
 use async_trait::async_trait;
-use binary_options_tools_core_pre::{
+use binary_options_tools_core::{
     error::CoreError,
     reimports::{AsyncReceiver, AsyncSender, Message},
     traits::{ApiModule, Rule, RunnerCommand},
@@ -205,7 +205,7 @@ impl ApiModule<State> for DealsApiModule {
         }
     }
 
-    async fn run(&mut self) -> binary_options_tools_core_pre::error::CoreResult<()> {
+    async fn run(&mut self) -> binary_options_tools_core::error::CoreResult<()> {
         let mut expected = ExpectedMessage::None;
         loop {
             tokio::select! {

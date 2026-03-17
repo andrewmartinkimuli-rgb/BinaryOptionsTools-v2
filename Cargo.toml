@@ -3,7 +3,6 @@ resolver = "2"
 
 members = [
     "crates/core",
-    "crates/core-pre",
     "crates/macros",
     "crates/binary_options_tools",
     "BinaryOptionsToolsV2/rust",

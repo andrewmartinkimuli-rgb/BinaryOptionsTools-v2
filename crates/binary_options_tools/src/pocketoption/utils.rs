@@ -1,6 +1,6 @@
-use binary_options_tools_core_pre::connector::{ConnectorError, ConnectorResult};
-use binary_options_tools_core_pre::error::{CoreError, CoreResult};
-use binary_options_tools_core_pre::reimports::{
+use binary_options_tools_core::connector::{ConnectorError, ConnectorResult};
+use binary_options_tools_core::error::{CoreError, CoreResult};
+use binary_options_tools_core::reimports::{
     connect_async_tls_with_config, generate_key, Connector, MaybeTlsStream, Request,
     WebSocketStream,
 };
