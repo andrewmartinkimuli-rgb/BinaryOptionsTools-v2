@@ -315,6 +315,7 @@ impl ApiModule<State> for TradesApiModule {
         // This rule will match messages like:
         // 451-["successopenOrder",...]
         // 451-["failopenOrder",...]
+        
         Box::new(MultiPatternRule::new(vec![
             "successopenOrder",
             "failopenOrder",

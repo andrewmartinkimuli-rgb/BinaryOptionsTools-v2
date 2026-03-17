@@ -1,10 +1,10 @@
 use async_trait::async_trait;
-use binary_options_tools_core_pre::builder::ClientBuilder;
-use binary_options_tools_core_pre::connector::ConnectorResult;
-use binary_options_tools_core_pre::connector::{Connector, WsStream};
-use binary_options_tools_core_pre::error::{CoreError, CoreResult};
-use binary_options_tools_core_pre::testing::{TestingWrapper, TestingWrapperBuilder};
-use binary_options_tools_core_pre::traits::{ApiModule, Rule, RunnerCommand};
+use binary_options_tools_core::builder::ClientBuilder;
+use binary_options_tools_core::connector::ConnectorResult;
+use binary_options_tools_core::connector::{Connector, WsStream};
+use binary_options_tools_core::error::{CoreError, CoreResult};
+use binary_options_tools_core::testing::{TestingWrapper, TestingWrapperBuilder};
+use binary_options_tools_core::traits::{ApiModule, Rule, RunnerCommand};
 use kanal::{AsyncReceiver, AsyncSender};
 use std::sync::atomic::{AtomicBool, Ordering};
 use std::sync::Arc;
@@ -172,7 +172,7 @@ impl TestingEchoPlatform {
         }
     }
 
-    pub async fn get_stats(&self) -> binary_options_tools_core_pre::statistics::ConnectionStats {
+    pub async fn get_stats(&self) -> binary_options_tools_core::statistics::ConnectionStats {
         self.testing_wrapper.get_stats().await
     }
 

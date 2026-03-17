@@ -1,10 +1,10 @@
 use async_trait::async_trait;
-use binary_options_tools_core_pre::builder::ClientBuilder;
-use binary_options_tools_core_pre::client::Client;
-use binary_options_tools_core_pre::connector::ConnectorResult;
-use binary_options_tools_core_pre::connector::{Connector, WsStream};
-use binary_options_tools_core_pre::error::{CoreError, CoreResult};
-use binary_options_tools_core_pre::traits::{ApiModule, Rule, RunnerCommand};
+use binary_options_tools_core::builder::ClientBuilder;
+use binary_options_tools_core::client::Client;
+use binary_options_tools_core::connector::ConnectorResult;
+use binary_options_tools_core::connector::{Connector, WsStream};
+use binary_options_tools_core::error::{CoreError, CoreResult};
+use binary_options_tools_core::traits::{ApiModule, Rule, RunnerCommand};
 use futures_util::stream::unfold;
 use futures_util::{Stream, StreamExt};
 use kanal::{AsyncReceiver, AsyncSender};

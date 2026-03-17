@@ -1,11 +1,11 @@
 use async_trait::async_trait;
-use binary_options_tools_core_pre::builder::ClientBuilder;
-use binary_options_tools_core_pre::connector::{Connector, ConnectorResult, WsStream};
-use binary_options_tools_core_pre::error::CoreResult;
-use binary_options_tools_core_pre::testing::{
+use binary_options_tools_core::builder::ClientBuilder;
+use binary_options_tools_core::connector::{Connector, ConnectorResult, WsStream};
+use binary_options_tools_core::error::CoreResult;
+use binary_options_tools_core::testing::{
     TestingConfig, TestingWrapper, TestingWrapperBuilder,
 };
-use binary_options_tools_core_pre::traits::{ApiModule, Rule, RunnerCommand};
+use binary_options_tools_core::traits::{ApiModule, Rule, RunnerCommand};
 use kanal::{AsyncReceiver, AsyncSender};
 use std::sync::Arc;
 use std::time::Duration;
@@ -20,7 +20,7 @@ impl Connector<()> for MockConnector {
         // This is a mock implementation, it would fail in real usage
         // but it's sufficient for testing the wrapper structure
         Err(
-            binary_options_tools_core_pre::connector::ConnectorError::Custom(
+            binary_options_tools_core::connector::ConnectorError::Custom(
                 "Mock connector".to_string(),
             ),
         )

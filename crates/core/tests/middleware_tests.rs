@@ -1,9 +1,9 @@
 use async_trait::async_trait;
-use binary_options_tools_core_pre::error::CoreResult;
-use binary_options_tools_core_pre::middleware::{
+use binary_options_tools_core::error::CoreResult;
+use binary_options_tools_core::middleware::{
     MiddlewareContext, MiddlewareStack, WebSocketMiddleware,
 };
-use binary_options_tools_core_pre::traits::AppState;
+use binary_options_tools_core::traits::AppState;
 use std::sync::atomic::{AtomicU64, Ordering};
 use std::sync::Arc;
 use tokio_tungstenite::tungstenite::Message;

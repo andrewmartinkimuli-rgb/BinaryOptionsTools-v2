@@ -16,6 +16,8 @@
 //! - `reimports`: Re-exports for convenience.
 //!
 //! This crate is intended for internal use by higher-level application crates.
+
+pub use binary_options_tools_core_macros::rule as Rule;
 pub mod builder;
 pub mod callback;
 pub mod client;
@@ -23,6 +25,7 @@ pub mod connector;
 pub mod error;
 pub mod message;
 pub mod middleware;
+pub mod rules;
 pub mod signals;
 pub mod statistics;
 pub mod testing;

@@ -1,9 +1,9 @@
 use async_trait::async_trait;
-use binary_options_tools_core_pre::builder::ClientBuilder;
-use binary_options_tools_core_pre::connector::{Connector, ConnectorResult, WsStream};
-use binary_options_tools_core_pre::error::CoreResult;
-use binary_options_tools_core_pre::middleware::{MiddlewareContext, WebSocketMiddleware};
-use binary_options_tools_core_pre::traits::{ApiModule, AppState, Rule, RunnerCommand};
+use binary_options_tools_core::builder::ClientBuilder;
+use binary_options_tools_core::connector::{Connector, ConnectorResult, WsStream};
+use binary_options_tools_core::error::CoreResult;
+use binary_options_tools_core::middleware::{MiddlewareContext, WebSocketMiddleware};
+use binary_options_tools_core::traits::{ApiModule, AppState, Rule, RunnerCommand};
 use kanal::{AsyncReceiver, AsyncSender};
 use std::sync::atomic::{AtomicU64, Ordering};
 use std::sync::Arc;
@@ -156,7 +156,7 @@ impl Connector<ExampleState> for MockConnector {
     async fn connect(&self, _: Arc<ExampleState>) -> ConnectorResult<WsStream> {
         // This would be a real WebSocket connection in practice
         Err(
-            binary_options_tools_core_pre::connector::ConnectorError::Custom(
+            binary_options_tools_core::connector::ConnectorError::Custom(
                 "Mock connector".to_string(),
             ),
         )

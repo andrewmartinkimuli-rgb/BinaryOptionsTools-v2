@@ -2,7 +2,7 @@ use bo2_macros::uniffi_doc;
 use std::sync::Arc;
 use tokio::sync::Mutex;
 
-use binary_options_tools::pocketoption::modules::subscriptions::SubscriptionStream as OriginalSubscriptionStream;
+use binary_options_tools::{pocketoption::modules::subscriptions::SubscriptionStream as OriginalSubscriptionStream, stream::Message};
 
 use crate::error::UniError;
 
