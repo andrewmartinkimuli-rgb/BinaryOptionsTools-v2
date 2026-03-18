@@ -1,3 +1,4 @@
+#![allow(unused)]
 use zyn::syn::Ident;
 
 

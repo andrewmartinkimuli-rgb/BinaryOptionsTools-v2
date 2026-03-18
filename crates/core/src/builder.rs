@@ -268,10 +268,10 @@ impl<S: AppState> ClientBuilder<S> {
     ///
     /// # Example
     /// ```rust,no_run
-    /// # use binary_options_tools_core_pre::builder::ClientBuilder;
-    /// # use binary_options_tools_core_pre::middleware::WebSocketMiddleware;
-    /// # use binary_options_tools_core_pre::traits::AppState;
-    /// # use binary_options_tools_core_pre::connector::{Connector, ConnectorResult, WsStream};
+    /// # use binary_options_tools_core::builder::ClientBuilder;
+    /// # use binary_options_tools_core::middleware::WebSocketMiddleware;
+    /// # use binary_options_tools_core::traits::AppState;
+    /// # use binary_options_tools_core::connector::{Connector, ConnectorResult, WsStream};
     /// # use async_trait::async_trait;
     /// # use std::sync::Arc;
     /// # #[derive(Debug)]
@@ -307,10 +307,10 @@ impl<S: AppState> ClientBuilder<S> {
     ///
     /// # Example
     /// ```rust,no_run
-    /// # use binary_options_tools_core_pre::builder::ClientBuilder;
-    /// # use binary_options_tools_core_pre::middleware::WebSocketMiddleware;
-    /// # use binary_options_tools_core_pre::traits::AppState;
-    /// # use binary_options_tools_core_pre::connector::{Connector, ConnectorResult, WsStream};
+    /// # use binary_options_tools_core::builder::ClientBuilder;
+    /// # use binary_options_tools_core::middleware::WebSocketMiddleware;
+    /// # use binary_options_tools_core::traits::AppState;
+    /// # use binary_options_tools_core::connector::{Connector, ConnectorResult, WsStream};
     /// # use async_trait::async_trait;
     /// # use std::sync::Arc;
     /// # #[derive(Debug)]
@@ -354,10 +354,10 @@ impl<S: AppState> ClientBuilder<S> {
     ///
     /// # Example
     /// ```rust,no_run
-    /// # use binary_options_tools_core_pre::builder::ClientBuilder;
-    /// # use binary_options_tools_core_pre::middleware::{MiddlewareStack, WebSocketMiddleware};
-    /// # use binary_options_tools_core_pre::traits::AppState;
-    /// # use binary_options_tools_core_pre::connector::{Connector, ConnectorResult, WsStream};
+    /// # use binary_options_tools_core::builder::ClientBuilder;
+    /// # use binary_options_tools_core::middleware::{MiddlewareStack, WebSocketMiddleware};
+    /// # use binary_options_tools_core::traits::AppState;
+    /// # use binary_options_tools_core::connector::{Connector, ConnectorResult, WsStream};
     /// # use async_trait::async_trait;
     /// # use std::sync::Arc;
     /// # #[derive(Debug)]

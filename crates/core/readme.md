@@ -11,8 +11,8 @@ This framework provides advanced statistics tracking, connection monitoring, and
 ### 1. Basic Usage
 
 ```rust
-use binary_options_tools_core_pre::testing::{TestingWrapper, TestingWrapperBuilder};
-use binary_options_tools_core_pre::builder::ClientBuilder;
+use binary_options_tools_core::testing::{TestingWrapper, TestingWrapperBuilder};
+use binary_options_tools_core::builder::ClientBuilder;
 use std::time::Duration;
 
 // Create your client and runner as usual

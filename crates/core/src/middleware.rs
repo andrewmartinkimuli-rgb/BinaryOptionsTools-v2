@@ -13,9 +13,9 @@
 //! # Example Usage
 //!
 //! ```rust,no_run
-//! use binary_options_tools_core_pre::middleware::{WebSocketMiddleware, MiddlewareContext};
-//! use binary_options_tools_core_pre::traits::AppState;
-//! use binary_options_tools_core_pre::error::CoreResult;
+//! use binary_options_tools_core::middleware::{WebSocketMiddleware, MiddlewareContext};
+//! use binary_options_tools_core::traits::AppState;
+//! use binary_options_tools_core::error::CoreResult;
 //! use async_trait::async_trait;
 //! use tokio_tungstenite::tungstenite::Message;
 //! use std::sync::Arc;
@@ -180,9 +180,9 @@ pub trait WebSocketMiddleware<S: AppState>: Send + Sync + 'static {
 ///
 /// # Example
 /// ```rust,no_run
-/// use binary_options_tools_core_pre::middleware::MiddlewareStack;
-/// # use binary_options_tools_core_pre::middleware::WebSocketMiddleware;
-/// # use binary_options_tools_core_pre::traits::AppState;
+/// use binary_options_tools_core::middleware::MiddlewareStack;
+/// # use binary_options_tools_core::middleware::WebSocketMiddleware;
+/// # use binary_options_tools_core::traits::AppState;
 /// # use async_trait::async_trait;
 /// # #[derive(Debug)]
 /// # struct MyState;
@@ -359,9 +359,9 @@ impl<S: AppState> Default for MiddlewareStack<S> {
 ///
 /// # Example
 /// ```rust,no_run
-/// use binary_options_tools_core_pre::middleware::MiddlewareStackBuilder;
-/// # use binary_options_tools_core_pre::middleware::WebSocketMiddleware;
-/// # use binary_options_tools_core_pre::traits::AppState;
+/// use binary_options_tools_core::middleware::MiddlewareStackBuilder;
+/// # use binary_options_tools_core::middleware::WebSocketMiddleware;
+/// # use binary_options_tools_core::traits::AppState;
 /// # use async_trait::async_trait;
 /// # #[derive(Debug)]
 /// # struct MyState;

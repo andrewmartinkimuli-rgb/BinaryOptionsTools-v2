@@ -746,6 +746,7 @@ mod tests {
 
     #[derive(serde::Deserialize)]
     struct TestData {
+        #[allow(dead_code)]
         id: u32,
     }
 

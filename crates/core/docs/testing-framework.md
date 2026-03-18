@@ -62,7 +62,7 @@ This framework provides advanced statistics tracking, connection monitoring, and
 ### Basic Usage
 
 ```rust
-use binary_options_tools_core_pre::testing::{TestingWrapper, TestingWrapperBuilder};
+use binary_options_tools_core::testing::{TestingWrapper, TestingWrapperBuilder};
 use std::time::Duration;
 
 // Create your client and runner as usual
@@ -327,9 +327,9 @@ The WebSocket client supports a composable middleware system inspired by Axum's 
 #### Basic Middleware Example
 
 ```rust
-use binary_options_tools_core_pre::middleware::{WebSocketMiddleware, MiddlewareContext};
-use binary_options_tools_core_pre::error::CoreResult;
-use binary_options_tools_core_pre::traits::AppState;
+use binary_options_tools_core::middleware::{WebSocketMiddleware, MiddlewareContext};
+use binary_options_tools_core::error::CoreResult;
+use binary_options_tools_core::traits::AppState;
 use async_trait::async_trait;
 use tokio_tungstenite::tungstenite::Message;
 
@@ -362,9 +362,9 @@ impl<S: AppState> WebSocketMiddleware<S> for LoggingMiddleware {
 #### Statistics Middleware Example
 
 ```rust
-use binary_options_tools_core_pre::middleware::{WebSocketMiddleware, MiddlewareContext};
-use binary_options_tools_core_pre::error::CoreResult;
-use binary_options_tools_core_pre::traits::AppState;
+use binary_options_tools_core::middleware::{WebSocketMiddleware, MiddlewareContext};
+use binary_options_tools_core::error::CoreResult;
+use binary_options_tools_core::traits::AppState;
 use async_trait::async_trait;
 use tokio_tungstenite::tungstenite::Message;
 use std::sync::Arc;
@@ -458,8 +458,8 @@ impl<S: AppState> WebSocketMiddleware<S> for StatisticsMiddleware {
 #### Using the ClientBuilder
 
 ```rust
-use binary_options_tools_core_pre::builder::ClientBuilder;
-use binary_options_tools_core_pre::middleware::MiddlewareStack;
+use binary_options_tools_core::builder::ClientBuilder;
+use binary_options_tools_core::middleware::MiddlewareStack;
 
 // Add a single middleware
 let (client, runner) = ClientBuilder::new(connector, state)
@@ -491,7 +491,7 @@ let (client, runner) = ClientBuilder::new(connector, state)
 #### Using the MiddlewareStackBuilder
 
 ```rust
-use binary_options_tools_core_pre::middleware::MiddlewareStackBuilder;
+use binary_options_tools_core::middleware::MiddlewareStackBuilder;
 
 let stack = MiddlewareStackBuilder::new()
     .layer(Box::new(LoggingMiddleware))

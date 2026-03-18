@@ -10,7 +10,7 @@ use std::sync::Arc;
 use uuid::Uuid;
 
 // Dummy stand-ins for project types
-mod binary_options_tools_core_pre {
+mod binary_options_tools_core {
     pub mod error {
         pub type CoreResult<T> = Result<T, String>;
     }
@@ -33,9 +33,9 @@ mod binary_options_tools_core_pre {
         }
     }
 }
-use binary_options_tools_core_pre::error::CoreResult;
-use binary_options_tools_core_pre::reimports::{AsyncReceiver, AsyncSender, Message};
-use binary_options_tools_core_pre::traits::Rule;
+use binary_options_tools_core::error::CoreResult;
+use binary_options_tools_core::reimports::{AsyncReceiver, AsyncSender, Message};
+use binary_options_tools_core::traits::Rule;
 
 // Dummy structs to mimic real ones
 struct State;
