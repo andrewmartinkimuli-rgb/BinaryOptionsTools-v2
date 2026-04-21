@@ -1,4 +1,9 @@
-use std::{collections::HashMap, collections::VecDeque, fmt::Debug, sync::Arc, time::Duration};
+use std::{
+    collections::{HashMap, VecDeque},
+    fmt::Debug,
+    sync::Arc,
+    time::Duration,
+};
 
 use async_trait::async_trait;
 use binary_options_tools_core::{
@@ -355,7 +360,7 @@ impl ApiModule<State> for PendingTradesApiModule {
                                             pending_order,
                                         }).await?;
                                     } else {
-                                        warn!(target: "PendingTradesApiModule", "Received successopenPendingOrder but no open req_id was pending. Dropping response to avoid ambiguity.");
+                                        warn!(target: "PendingTradesApiModule", "Received success openPendingOrder but no open req_id was pending. Dropping response to avoid ambiguity.");
                                     }
                                 }
                                 ServerResponse::Fail(fail) => {
