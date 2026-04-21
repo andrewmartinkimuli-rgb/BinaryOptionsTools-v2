@@ -332,10 +332,7 @@ class PocketOptionAsync:
             TimeoutError: If result check times out
         """
 
-        # Let Rust handle the timeout — it knows the trade close timestamp.
-        # The previous hardcoded 60s timeout broke trades of any duration
-        # because asyncio cancelled the coroutine right when the server
-        # was sending the result.
+        # Let Rust handle the timeout based on the trade close timestamp.
         return await self._get_trade_result(id)
 
     async def get_deal_end_time(self, trade_id: str) -> Optional[int]:
