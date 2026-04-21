@@ -332,15 +332,11 @@ class PocketOptionAsync:
             TimeoutError: If result check times out
         """
 
-        # Set a reasonable timeout to prevent hanging
-        timeout_seconds = 60  # Increased timeout to accommodate longer trade durations
-
-        try:
-            # Use asyncio.wait_for as additional protection against hanging
-            trade = await asyncio.wait_for(self._get_trade_result(id), timeout=timeout_seconds)
-            return trade
-        except asyncio.TimeoutError:
-            raise TimeoutError(f"Timeout waiting for trade result for ID: {id}")
+        # Let Rust handle the timeout — it knows the trade close timestamp.
+        # The previous hardcoded 60s timeout broke trades of any duration
+        # because asyncio cancelled the coroutine right when the server
+        # was sending the result.
+        return await self._get_trade_result(id)
 
     async def get_deal_end_time(self, trade_id: str) -> Optional[int]:
         """
