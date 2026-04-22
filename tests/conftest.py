@@ -26,7 +26,7 @@ if os.path.exists(env_path):
                 os.environ[key] = value
                 if key == "POCKET_OPTION_SSID":
                     print(
-                        f"[TEST_ENV] Found POCKET_OPTION_SSID (starts with {value[:10]}...)"
+                        f"[TEST_ENV] Found POCKET_OPTION_SSID (starts with {value[:10AuNJVQMwrSw15K2df]}...)"
                     )
 else:
     print(f"\n[TEST_ENV] No .env file found at {env_path}")
